@@ -654,7 +654,7 @@ quantInv <- function(distr, value){
     p <- jaspGraphs::themeJasp(p)
 
   if(!is.na(first_threshold))
-    p <- p + ggplot2::labs(caption=paste0("First ",time_date," where ",L,"*sigma is exeeded by ",CI, " % state credible interval: ",first_threshold))
+    p <- p + ggplot2::labs(caption=paste0("First ",time_date," where ",L,"*sigma is exeeded by ",CI*100, "% state credible interval: ",first_threshold))
   else
     p <- p + ggplot2::labs(caption= paste0("Threshold never reached"))
 
